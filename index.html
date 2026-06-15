@@ -437,7 +437,7 @@ const EDITAR_MODULO_CREDITO = {
   // Conexión operativa
   // Pega aquí el webhook funcional de Make si quieres actualizar el mismo expediente.
   // Make debe buscar primero por teléfono y, si existe, actualizar el registro.
-  WEBHOOK_MAKE: "",
+  WEBHOOK_MAKE: "https://hook.us2.make.com/1davck88uo2wsl9ury3fega7gydfo1fd",
 
   // Identificadores internos para Airtable / Make
   FASE_ORIGEN: "brujula_bancaria",
@@ -483,8 +483,7 @@ function aplicarPersonalizacion(){
   var title = document.querySelector('#s1 .big-title');
   if(title && EDITAR_MODULO_CREDITO.TITULO_INICIAL){
     title.innerHTML = EDITAR_MODULO_CREDITO.TITULO_INICIAL
-      .replace(/
-/g,'<br>')
+      .replace(/\n/g,'<br>')
       .replace('examen.','<em>examen.</em>');
   }
   var ps = document.querySelectorAll('#s1 .body-text');
